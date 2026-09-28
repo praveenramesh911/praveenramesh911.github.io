@@ -334,3 +334,34 @@ footer {
     color: #111827;
     margin-bottom: 8px;
 }
+/* Tools & Techniques Cards */
+
+.tools-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.tool-card {
+    background: white;
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.10);
+    border-top: 4px solid #f2c811;
+    text-align: center;
+}
+
+.tool-card h3 {
+    font-size: 21px;
+    color: #111827;
+    margin-bottom: 10px;
+}
+
+.tool-card p {
+    font-size: 15px;
+    color: #4b5563;
+    line-height: 1.6;
+    margin: 0;
+}
