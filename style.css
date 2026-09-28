@@ -308,7 +308,7 @@ footer {
 }
 /* Dashboard Analysis Cards */
 
-.projects .about-content {
+.dashboard-analysis {
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
@@ -316,7 +316,7 @@ footer {
     gap: 25px;
 }
 
-.projects .about-content p {
+.dashboard-analysis p {
     background: white;
     padding: 25px;
     margin: 0;
@@ -328,7 +328,7 @@ footer {
     color: #4b5563;
 }
 
-.projects .about-content strong {
+.dashboard-analysis strong {
     display: block;
     font-size: 20px;
     color: #111827;
