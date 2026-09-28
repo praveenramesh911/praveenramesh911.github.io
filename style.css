@@ -275,3 +275,34 @@ footer {
     background-color: #f2c811 !important;
     color: #111827 !important;
 }
+/* KPI Cards */
+
+.kpi-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.kpi-card {
+    background: white;
+    padding: 25px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.10);
+    border-top: 4px solid #f2c811;
+}
+
+.kpi-card h3 {
+    font-size: 30px;
+    color: #111827;
+    margin-bottom: 8px;
+}
+
+.kpi-card p {
+    font-size: 16px;
+    color: #4b5563;
+    font-weight: bold;
+    margin: 0;
+}
