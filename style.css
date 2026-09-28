@@ -241,6 +241,35 @@ footer {
     border-radius: 6px;
     font-weight: bold;
 }
+/* Samsung Dashboard Gallery */
+
+.dashboard-gallery {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.dashboard-item {
+    background: white;
+    padding: 25px;
+    margin-bottom: 35px;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.dashboard-item h3 {
+    font-size: 24px;
+    color: #111827;
+    margin-bottom: 20px;
+    border-left: 5px solid #f2c811;
+    padding-left: 12px;
+}
+
+.dashboard-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
 
 .project-btn:hover {
     background-color: #f2c811 !important;
