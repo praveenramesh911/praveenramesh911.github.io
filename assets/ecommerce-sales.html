@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>E-Commerce Sales Analysis | Praveen R</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f7fa;
+            color: #111827;
+            line-height: 1.6;
+        }
+
+        /* HEADER */
+
+        header {
+            background: #0b1f3a;
+            color: white;
+            padding: 20px 7%;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        nav {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: #f2c811;
+        }
+
+        /* HERO */
+
+        .project-hero {
+            background: #0b1f3a;
+            color: white;
+            padding: 90px 7%;
+        }
+
+        .project-hero-content {
+            max-width: 1100px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .project-hero h1 {
+            font-size: 52px;
+            margin-bottom: 15px;
+        }
+
+        .project-hero h2 {
+            color: #f2c811;
+            font-size: 25px;
+            margin-bottom: 20px;
+        }
+
+        .project-hero p {
+            max-width: 800px;
+            margin: auto;
+            font-size: 18px;
+            color: #dbe4f0;
+        }
+
+        /* SECTIONS */
+
+        section {
+            padding: 70px 7%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 45px;
+            color: #111827;
+        }
+
+        /* DASHBOARD */
+
+        .dashboard-gallery {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .dashboard-item {
+            background: white;
+            padding: 25px;
+            border-radius: 16px;
+
+            box-shadow:
+                0 8px 30px rgba(0, 0, 0, 0.10);
+        }
+
+        .dashboard-item h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+
+            padding-left: 15px;
+
+            border-left: 5px solid #f2c811;
+
+            color: #111827;
+        }
+
+        .dashboard-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 10px;
+        }
+
+        /* KPI */
+
+        .kpi-grid {
+            max-width: 1150px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 25px;
+        }
+
+        .kpi-card {
+            background: white;
+            padding: 30px 20px;
+
+            text-align: center;
+
+            border-radius: 15px;
+
+            border-top: 5px solid #f2c811;
+
+            box-shadow:
+                0 8px 25px rgba(0, 0, 0, 0.10);
+        }
+
+        .kpi-card h3 {
+            font-size: 32px;
+            color: #111827;
+            margin-bottom: 8px;
+        }
+
+        .kpi-card p {
+            color: #6b7280;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        /* ANALYSIS */
+
+        .analysis-grid {
+            max-width: 1150px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 25px;
+        }
+
+        .analysis-card {
+            background: white;
+            padding: 30px;
+
+            border-radius: 15px;
+
+            border-left: 5px solid #f2c811;
+
+            box-shadow:
+                0 8px 25px rgba(0, 0, 0, 0.10);
+        }
+
+        .analysis-card h3 {
+            font-size: 23px;
+            margin-bottom: 12px;
+        }
+
+        .analysis-card p {
+            color: #6b7280;
+        }
+
+        /* TOOLS */
+
+        .tools-grid {
+            max-width: 1150px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+        .tool-card {
+            background: white;
+            padding: 30px;
+
+            text-align: center;
+
+            border-radius: 15px;
+
+            border-top: 4px solid #f2c811;
+
+            box-shadow:
+                0 8px 25px rgba(0, 0, 0, 0.10);
+        }
+
+        .tool-card h3 {
+            margin-bottom: 10px;
+            font-size: 22px;
+        }
+
+        .tool-card p {
+            color: #6b7280;
+        }
+
+        /* BACK BUTTON */
+
+        .back-container {
+            width: 100%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            padding: 40px 20px 70px;
+        }
+
+        .back-button {
+            display: inline-block;
+
+            padding: 13px 28px;
+
+            background: #111827;
+            color: white;
+
+            text-decoration: none;
+
+            border-radius: 7px;
+
+            font-weight: bold;
+        }
+
+        .back-button:hover {
+            background: #f2c811;
+            color: #111827;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #0b1f3a;
+            color: white;
+
+            text-align: center;
+
+            padding: 25px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 768px) {
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .project-hero h1 {
+                font-size: 38px;
+            }
+
+            .project-hero h2 {
+                font-size: 21px;
+            }
+
+            .kpi-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .analysis-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .tools-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="logo">
+            Praveen R
+        </div>
+
+        <nav>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="index.html#about">
+                About
+            </a>
+
+            <a href="index.html#skills">
+                Skills
+            </a>
+
+            <a href="index.html#projects">
+                Projects
+            </a>
+
+            <a href="index.html#contact">
+                Contact
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- HERO -->
+
+    <section class="project-hero">
+
+        <div class="project-hero-content">
+
+            <h1>
+                E-Commerce Sales Analysis
+            </h1>
+
+            <h2>
+                Power BI Dashboard
+            </h2>
+
+            <p>
+                An interactive Power BI dashboard designed to
+                analyze e-commerce sales, profit, product
+                performance, regional sales and shipping
+                performance through business-focused
+                visualizations.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- DASHBOARD PREVIEW -->
+
+    <section>
+
+        <h2 class="section-title">
+            Dashboard Preview
+        </h2>
+
+        <div class="dashboard-gallery">
+
+            <div class="dashboard-item">
+
+                <h3>
+                    E-Commerce Sales Dashboard
+                </h3>
+
+                <img
+                    src="assets/Ecommerce_Sales_Dashboard.png"
+                    alt="E-Commerce Sales Power BI Dashboard">
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- KPI SECTION -->
+
+    <section>
+
+        <h2 class="section-title">
+            Key Performance Indicators
+        </h2>
+
+        <div class="kpi-grid">
+
+
+            <div class="kpi-card">
+
+                <h3>
+                    $11.53M
+                </h3>
+
+                <p>
+                    YTD Sales
+                </p>
+
+            </div>
+
+
+            <div class="kpi-card">
+
+                <h3>
+                    $1.34M
+                </h3>
+
+                <p>
+                    YTD Profit
+                </p>
+
+            </div>
+
+
+            <div class="kpi-card">
+
+                <h3>
+                    107.2K
+                </h3>
+
+                <p>
+                    YTD Quantity
+                </p>
+
+            </div>
+
+
+            <div class="kpi-card">
+
+                <h3>
+                    11.58%
+                </h3>
+
+                <p>
+                    YTD Profit Margin
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- DASHBOARD ANALYSIS -->
+
+    <section>
+
+        <h2 class="section-title">
+            Dashboard Analysis
+        </h2>
+
+        <div class="analysis-grid">
+
+
+            <div class="analysis-card">
+
+                <h3>
+                    Sales Performance
+                </h3>
+
+                <p>
+                    Analyzes year-to-date sales and compares
+                    performance with previous periods to
+                    understand overall sales trends.
+                </p>
+
+            </div>
+
+
+            <div class="analysis-card">
+
+                <h3>
+                    Product Performance
+                </h3>
+
+                <p>
+                    Identifies top-performing and
+                    underperforming products based on
+                    year-to-date sales.
+                </p>
+
+            </div>
+
+
+            <div class="analysis-card">
+
+                <h3>
+                    Regional Analysis
+                </h3>
+
+                <p>
+                    Examines sales distribution across
+                    different regions and states to
+                    understand geographical performance.
+                </p>
+
+            </div>
+
+
+            <div class="analysis-card">
+
+                <h3>
+                    Category Analysis
+                </h3>
+
+                <p>
+                    Compares sales performance across
+                    Furniture, Office Supplies and
+                    Technology categories.
+                </p>
+
+            </div>
+
+
+            <div class="analysis-card">
+
+                <h3>
+                    Shipping Analysis
+                </h3>
+
+                <p>
+                    Analyzes sales distribution across
+                    different shipping types to understand
+                    order fulfillment patterns.
+                </p>
+
+            </div>
+
+
+            <div class="analysis-card">
+
+                <h3>
+                    Profitability Analysis
+                </h3>
+
+                <p>
+                    Evaluates profit and profit margin
+                    performance to provide a clearer view
+                    of business profitability.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- TOOLS -->
+
+    <section>
+
+        <h2 class="section-title">
+            Tools & Techniques
+        </h2>
+
+        <div class="tools-grid">
+
+
+            <div class="tool-card">
+
+                <h3>
+                    Power BI
+                </h3>
+
+                <p>
+                    Dashboard Development & Business Intelligence
+                </p>
+
+            </div>
+
+
+            <div class="tool-card">
+
+                <h3>
+                    Power Query
+                </h3>
+
+                <p>
+                    Data Cleaning & Transformation
+                </p>
+
+            </div>
+
+
+            <div class="tool-card">
+
+                <h3>
+                    DAX
+                </h3>
+
+                <p>
+                    Measures, Calculations & KPIs
+                </p>
+
+            </div>
+
+
+            <div class="tool-card">
+
+                <h3>
+                    Data Modeling
+                </h3>
+
+                <p>
+                    Relationships & Business Data Models
+                </p>
+
+            </div>
+
+
+            <div class="tool-card">
+
+                <h3>
+                    Data Visualization
+                </h3>
+
+                <p>
+                    Interactive Charts & Dashboard Design
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- BACK -->
+
+    <div class="back-container">
+
+        <a
+            href="index.html"
+            class="back-button">
+
+            ← Back to Portfolio
+
+        </a>
+
+    </div>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        © 2026 Praveen R | Power BI Developer
+
+    </footer>
+
+
+</body>
+
+</html>
