@@ -306,3 +306,31 @@ footer {
     font-weight: bold;
     margin: 0;
 }
+/* Dashboard Analysis Cards */
+
+.projects .about-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.projects .about-content p {
+    background: white;
+    padding: 25px;
+    margin: 0;
+    border-radius: 14px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.10);
+    border-left: 5px solid #f2c811;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #4b5563;
+}
+
+.projects .about-content strong {
+    display: block;
+    font-size: 20px;
+    color: #111827;
+    margin-bottom: 8px;
+}
