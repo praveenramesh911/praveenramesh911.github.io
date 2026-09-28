@@ -235,14 +235,14 @@ footer {
     display: inline-block;
     margin-top: 20px;
     padding: 12px 24px;
-    background: #111827;
-    color: white;
-    text-decoration: none;
+    background-color: #111827 !important;
+    color: white !important;
+    text-decoration: none !important;
     border-radius: 6px;
     font-weight: bold;
 }
 
 .project-btn:hover {
-    background: #f2c811;
-    color: #111827;
+    background-color: #f2c811 !important;
+    color: #111827 !important;
 }
