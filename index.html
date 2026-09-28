@@ -1,121 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Praveen R | Power BI Developer</title>
-    <link rel = "stylesheet" href = "style.css">
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f5f7fa;
-            color: #222;
-        }
-
-        header {
-            background: #111827;
-            color: white;
-            padding: 20px 8%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        header h2 {
-            margin: 0;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin-left: 25px;
-        }
-
-        .hero {
-            min-height: 70vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 40px 20px;
-        }
-
-        .hero h1 {
-            font-size: 52px;
-            margin-bottom: 10px;
-        }
-
-        .hero h2 {
-            font-size: 28px;
-            color: #f2c811;
-        }
-
-        .hero p {
-            font-size: 18px;
-            max-width: 650px;
-            margin: 20px auto;
-            line-height: 1.6;
-        }
-
-        .button {
-            display: inline-block;
-            background: #f2c811;
-            color: #111;
-            padding: 14px 28px;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: bold;
-            margin-top: 15px;
-        }
-
-        section {
-            padding: 70px 8%;
-            background: white;
-        }
-
-        section h2 {
-            text-align: center;
-            font-size: 32px;
-            margin-bottom: 30px;
-        }
-
-        .about {
-            max-width: 800px;
-            margin: auto;
-            text-align: center;
-            line-height: 1.8;
-            font-size: 17px;
-        }
-
-        footer {
-            background: #111827;
-            color: white;
-            text-align: center;
-            padding: 25px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+    <!-- Navigation -->
+
     <header>
-        <h2>Praveen R</h2>
+
+        <div class="logo">
+            Praveen R
+        </div>
 
         <nav>
             <a href="#home">Home</a>
             <a href="#about">About</a>
+            <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
         </nav>
+
     </header>
 
 
+    <!-- Hero Section -->
+
     <section class="hero" id="home">
 
-        <div>
+        <div class="hero-content">
+
             <h1>Hi, I'm Praveen R</h1>
 
             <h2>Power BI Developer</h2>
@@ -125,23 +47,32 @@
             </p>
 
             <p>
-                I build interactive Power BI dashboards that transform
-                raw data into meaningful business insights.
+                I transform raw data into interactive dashboards
+                and meaningful business insights using Power BI.
             </p>
 
-            <a href="#projects" class="button">
+            <a href="#projects" class="btn">
                 View My Projects
             </a>
+
+            <a href="#contact" class="btn">
+                Contact Me
+            </a>
+
         </div>
 
     </section>
 
 
+    <!-- About Section -->
+
     <section id="about">
 
-        <h2>About Me</h2>
+        <h2 class="section-title">
+            About Me
+        </h2>
 
-        <div class="about">
+        <div class="about-content">
 
             <p>
                 I'm a recent graduate and aspiring Power BI Developer
@@ -160,20 +91,56 @@
     </section>
 
 
-    <section id="projects">
+    <!-- Skills Section -->
 
-        <h2>Featured Projects</h2>
+    <section id="skills">
 
-        <div class="about">
+        <h2 class="section-title">
+            Skills
+        </h2>
+
+        <div class="about-content">
 
             <p>
-                My Power BI portfolio includes projects in sales,
-                customer analytics, supply chain, finance, HR,
-                e-commerce and business intelligence.
+                Power BI &nbsp; | &nbsp;
+                Power Query &nbsp; | &nbsp;
+                DAX &nbsp; | &nbsp;
+                Data Modeling
             </p>
 
             <p>
-                Project showcases will be added here next.
+                Data Visualization &nbsp; | &nbsp;
+                Excel &nbsp; | &nbsp;
+                SQL
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Projects Section -->
+
+    <section class="projects" id="projects">
+
+        <h2 class="section-title">
+            Featured Projects
+        </h2>
+
+        <div class="project-placeholder">
+
+            <h3>Power BI Portfolio</h3>
+
+            <p>
+                My portfolio includes Power BI projects covering
+                Sales, Customer Analytics, Supply Chain, Finance,
+                HR, E-Commerce and Business Intelligence.
+            </p>
+
+            <br>
+
+            <p>
+                Project showcases will be added here.
             </p>
 
         </div>
@@ -181,31 +148,35 @@
     </section>
 
 
-    <section id="contact">
+    <!-- Contact Section -->
 
-        <h2>Contact</h2>
+    <section class="contact" id="contact">
 
-        <div class="about">
+        <h2 class="section-title">
+            Contact
+        </h2>
 
-            <p>
-                Interested in working together or discussing a
-                Power BI project?
-            </p>
+        <p>
+            Interested in discussing a Power BI project?
+        </p>
 
-            <p>
-                Email: Your Email Here
-            </p>
-
-        </div>
+        <p>
+            Email: Your Email Here
+        </p>
 
     </section>
 
+
+    <!-- Footer -->
 
     <footer>
 
-        <p>© 2026 Praveen R | Power BI Developer</p>
+        <p>
+            © 2026 Praveen R | Power BI Developer
+        </p>
 
     </footer>
 
 </body>
+
 </html>
