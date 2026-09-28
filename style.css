@@ -232,3 +232,18 @@ footer {
     font-size: 14px;
     font-weight: bold;
 }
+.project-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background: #111827;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.project-btn:hover {
+    background: #f2c811;
+    color: #111827;
+}
