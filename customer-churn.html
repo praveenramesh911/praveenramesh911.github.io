@@ -3,14 +3,301 @@
 
 <head>
 
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Customer Churn Analysis | Praveen R</title>
+<title>Customer Churn Analysis | Praveen R</title>
 
-    <link rel="stylesheet" href="style.css">
+<style>
+
+/* ===== GLOBAL ===== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7fa;
+    color: #111827;
+    line-height: 1.6;
+}
+
+
+/* ===== HEADER ===== */
+
+header {
+    background: #0b1f3a;
+    color: white;
+    padding: 20px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #f2c811;
+}
+
+
+/* ===== HERO ===== */
+
+.project-hero {
+    background: #0b1f3a;
+    color: white;
+    padding: 90px 7%;
+}
+
+.project-hero-content {
+    max-width: 1100px;
+    margin: auto;
+    text-align: center;
+}
+
+.project-hero h1 {
+    font-size: 52px;
+    margin-bottom: 15px;
+}
+
+.project-hero h2 {
+    color: #f2c811;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.project-hero p {
+    max-width: 800px;
+    margin: auto;
+    font-size: 18px;
+    color: #dbe4f0;
+}
+
+
+/* ===== SECTIONS ===== */
+
+section {
+    padding: 70px 7%;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 45px;
+    color: #111827;
+}
+
+
+/* ===== DASHBOARD GALLERY ===== */
+
+.dashboard-gallery {
+    max-width: 1150px;
+    margin: auto;
+}
+
+.dashboard-item {
+    background: white;
+    padding: 25px;
+    margin-bottom: 35px;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.10);
+}
+
+.dashboard-item h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    padding-left: 15px;
+    border-left: 5px solid #f2c811;
+    color: #111827;
+}
+
+.dashboard-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+
+/* ===== KPI CARDS ===== */
+
+.kpi-grid {
+    max-width: 1150px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.kpi-card {
+    background: white;
+    padding: 30px 20px;
+    text-align: center;
+    border-radius: 15px;
+    border-top: 5px solid #f2c811;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.10);
+}
+
+.kpi-card h3 {
+    font-size: 32px;
+    color: #111827;
+    margin-bottom: 8px;
+}
+
+.kpi-card p {
+    color: #6b7280;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+/* ===== ANALYSIS CARDS ===== */
+
+.analysis-grid {
+    max-width: 1150px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.analysis-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    border-left: 5px solid #f2c811;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.10);
+}
+
+.analysis-card h3 {
+    font-size: 23px;
+    margin-bottom: 12px;
+}
+
+.analysis-card p {
+    color: #6b7280;
+}
+
+
+/* ===== TOOLS ===== */
+
+.tools-grid {
+    max-width: 1150px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.tool-card {
+    background: white;
+    padding: 30px;
+    text-align: center;
+    border-radius: 15px;
+    border-top: 4px solid #f2c811;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.10);
+}
+
+.tool-card h3 {
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+.tool-card p {
+    color: #6b7280;
+}
+
+
+/* ===== BACK BUTTON ===== */
+
+.back-container {
+    text-align: center;
+    padding: 20px 20px 70px;
+}
+
+.back-button {
+    display: inline-block;
+    padding: 13px 28px;
+    background: #111827;
+    color: white;
+    text-decoration: none;
+    border-radius: 7px;
+    font-weight: bold;
+}
+
+.back-button:hover {
+    background: #f2c811;
+    color: #111827;
+}
+
+
+/* ===== FOOTER ===== */
+
+footer {
+    background: #0b1f3a;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+
+/* ===== MOBILE ===== */
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .project-hero h1 {
+        font-size: 38px;
+    }
+
+    .project-hero h2 {
+        font-size: 21px;
+    }
+
+    .kpi-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .analysis-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tools-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+</style>
 
 </head>
 
@@ -18,385 +305,334 @@
 <body>
 
 
-    <!-- Navigation -->
+<!-- HEADER -->
 
-    <header>
+<header>
 
-        <div class="logo">
-            Praveen R
+    <div class="logo">
+        Praveen R
+    </div>
+
+    <nav>
+
+        <a href="index.html">Home</a>
+
+        <a href="index.html#about">About</a>
+
+        <a href="index.html#skills">Skills</a>
+
+        <a href="index.html#projects">Projects</a>
+
+        <a href="index.html#contact">Contact</a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- HERO -->
+
+<div class="project-hero">
+
+    <div class="project-hero-content">
+
+        <h1>
+            Customer Churn Analysis
+        </h1>
+
+        <h2>
+            Power BI Dashboard
+        </h2>
+
+        <p>
+            An interactive Power BI dashboard designed to analyze
+            customer churn, retention, customer demographics,
+            subscribed services and key business metrics.
+        </p>
+
+    </div>
+
+</div>
+
+
+
+<!-- DASHBOARD PREVIEW -->
+
+<section>
+
+    <h2 class="section-title">
+        Dashboard Preview
+    </h2>
+
+    <div class="dashboard-gallery">
+
+
+        <div class="dashboard-item">
+
+            <h3>
+                Customer Churn Analysis
+            </h3>
+
+            <img
+                src="assets/Customer-Churn-Analysis.png"
+                alt="Customer Churn Analysis Dashboard">
+
         </div>
 
-        <nav>
 
-            <a href="index.html">Home</a>
+        <div class="dashboard-item">
 
-            <a href="index.html#about">About</a>
+            <h3>
+                Customer Churn Overview
+            </h3>
 
-            <a href="index.html#skills">Skills</a>
+            <img
+                src="assets/Customer-Churn-Overview.png"
+                alt="Customer Churn Overview Dashboard">
 
-            <a href="index.html#projects">Projects</a>
-
-            <a href="index.html#contact">Contact</a>
-
-        </nav>
-
-    </header>
+        </div>
 
 
+    </div>
 
-    <!-- Project Hero -->
+</section>
 
-    <section class="hero">
 
-        <div class="hero-content">
 
-            <h1>
-                Customer Churn Analysis
-            </h1>
+<!-- KPI -->
 
-            <h2>
-                Power BI Dashboard
-            </h2>
+<section>
+
+    <h2 class="section-title">
+        Key Performance Indicators
+    </h2>
+
+    <div class="kpi-grid">
+
+
+        <div class="kpi-card">
+            <h3>3,488</h3>
+            <p>Total Customers</p>
+        </div>
+
+
+        <div class="kpi-card">
+            <h3>939</h3>
+            <p>Churned Customers</p>
+        </div>
+
+
+        <div class="kpi-card">
+            <h3>27%</h3>
+            <p>Churn Rate</p>
+        </div>
+
+
+        <div class="kpi-card">
+            <h3>2,549</h3>
+            <p>Active Customers</p>
+        </div>
+
+
+        <div class="kpi-card">
+            <h3>1,869</h3>
+            <p>Customers at Risk</p>
+        </div>
+
+
+        <div class="kpi-card">
+            <h3>$2.86M</h3>
+            <p>Total Charges</p>
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- DASHBOARD ANALYSIS -->
+
+<section>
+
+    <h2 class="section-title">
+        Dashboard Analysis
+    </h2>
+
+
+    <div class="analysis-grid">
+
+
+        <div class="analysis-card">
+
+            <h3>
+                Customer Churn
+            </h3>
 
             <p>
-                An interactive Power BI dashboard designed to analyze
-                customer churn, retention, customer demographics,
-                services and key business metrics.
+                Analysis of overall customer churn and retention
+                performance.
             </p>
 
         </div>
 
-    </section>
 
+        <div class="analysis-card">
 
+            <h3>
+                Customer Segmentation
+            </h3>
 
-    <!-- Dashboard Preview -->
-
-    <section>
-
-        <h2 class="section-title">
-            Dashboard Preview
-        </h2>
-
-
-        <div class="dashboard-gallery">
-
-
-            <!-- Dashboard 1 -->
-
-            <div class="dashboard-item">
-
-                <h3>
-                    Customer Churn Analysis
-                </h3>
-
-                <img
-                    src="assets/Customer-Churn-Analysis.png"
-                    alt="Customer Churn Analysis Dashboard">
-
-            </div>
-
-
-
-            <!-- Dashboard 2 -->
-
-            <div class="dashboard-item">
-
-                <h3>
-                    Customer Churn Overview
-                </h3>
-
-                <img
-                    src="assets/Customer-Churn-Overview.png"
-                    alt="Customer Churn Overview Dashboard">
-
-            </div>
-
+            <p>
+                Analysis of customer groups based on demographics,
+                services and customer behavior.
+            </p>
 
         </div>
 
-    </section>
 
+        <div class="analysis-card">
 
+            <h3>
+                Churn Drivers
+            </h3>
 
-    <!-- Key Performance Indicators -->
-
-    <section>
-
-        <h2 class="section-title">
-            Key Performance Indicators
-        </h2>
-
-
-        <div class="kpi-grid">
-
-
-            <div class="kpi-card">
-
-                <h3>
-                    3,488
-                </h3>
-
-                <p>
-                    Total Customers
-                </p>
-
-            </div>
-
-
-            <div class="kpi-card">
-
-                <h3>
-                    939
-                </h3>
-
-                <p>
-                    Churned Customers
-                </p>
-
-            </div>
-
-
-            <div class="kpi-card">
-
-                <h3>
-                    27%
-                </h3>
-
-                <p>
-                    Churn Rate
-                </p>
-
-            </div>
-
-
-            <div class="kpi-card">
-
-                <h3>
-                    2,549
-                </h3>
-
-                <p>
-                    Active Customers
-                </p>
-
-            </div>
-
-
-            <div class="kpi-card">
-
-                <h3>
-                    1,869
-                </h3>
-
-                <p>
-                    Customers at Risk
-                </p>
-
-            </div>
-
-
-            <div class="kpi-card">
-
-                <h3>
-                    $2.86M
-                </h3>
-
-                <p>
-                    Total Charges
-                </p>
-
-            </div>
-
+            <p>
+                Identification of factors associated with higher
+                customer churn.
+            </p>
 
         </div>
 
-    </section>
 
+        <div class="analysis-card">
 
+            <h3>
+                Customer Retention
+            </h3>
 
-    <!-- Dashboard Analysis -->
-
-    <section>
-
-        <h2 class="section-title">
-            Dashboard Analysis
-        </h2>
-
-
-        <div class="dashboard-gallery">
-
-
-            <div class="dashboard-item">
-
-                <h3>
-                    Customer Churn
-                </h3>
-
-                <p>
-                    Analysis of overall customer churn and retention
-                    performance to understand the percentage of
-                    customers leaving the business.
-                </p>
-
-            </div>
-
-
-            <div class="dashboard-item">
-
-                <h3>
-                    Customer Segmentation
-                </h3>
-
-                <p>
-                    Analysis of customer groups based on demographics,
-                    subscribed services and customer behavior.
-                </p>
-
-            </div>
-
-
-            <div class="dashboard-item">
-
-                <h3>
-                    Churn Drivers
-                </h3>
-
-                <p>
-                    Identification of factors and customer attributes
-                    associated with higher churn levels.
-                </p>
-
-            </div>
-
-
-            <div class="dashboard-item">
-
-                <h3>
-                    Customer Retention
-                </h3>
-
-                <p>
-                    Analysis of retained customers and patterns that
-                    support customer retention.
-                </p>
-
-            </div>
-
+            <p>
+                Analysis of retained customers and patterns that
+                support customer retention.
+            </p>
 
         </div>
 
-    </section>
-
-
-
-    <!-- Tools & Techniques -->
-
-    <section>
-
-        <h2 class="section-title">
-            Tools & Techniques
-        </h2>
-
-
-        <div class="dashboard-gallery">
-
-
-            <div class="dashboard-item">
-
-                <h3>
-                    Power BI
-                </h3>
-
-                <p>
-                    Dashboard Development & Business Intelligence
-                </p>
-
-            </div>
-
-
-            <div class="dashboard-item">
-
-                <h3>
-                    Power Query
-                </h3>
-
-                <p>
-                    Data Cleaning & Transformation
-                </p>
-
-            </div>
-
-
-            <div class="dashboard-item">
-
-                <h3>
-                    DAX
-                </h3>
-
-                <p>
-                    Measures, Calculations & KPIs
-                </p>
-
-            </div>
-
-
-            <div class="dashboard-item">
-
-                <h3>
-                    Data Modeling
-                </h3>
-
-                <p>
-                    Relationships & Business Data Models
-                </p>
-
-            </div>
-
-
-            <div class="dashboard-item">
-
-                <h3>
-                    Data Visualization
-                </h3>
-
-                <p>
-                    Interactive Charts & Dashboard Design
-                </p>
-
-            </div>
-
-
-        </div>
-
-    </section>
-
-
-
-    <!-- Back to Portfolio -->
-
-    <div class="back-button-container">
-
-        <a href="index.html"
-           class="project-btn">
-
-            ← Back to Portfolio
-
-        </a>
 
     </div>
 
+</section>
 
 
-    <!-- Footer -->
 
-    <footer>
+<!-- TOOLS -->
 
-        <p>
-            © 2026 Praveen R | Power BI Developer
-        </p>
+<section>
 
-    </footer>
+    <h2 class="section-title">
+        Tools & Techniques
+    </h2>
+
+
+    <div class="tools-grid">
+
+
+        <div class="tool-card">
+
+            <h3>
+                Power BI
+            </h3>
+
+            <p>
+                Dashboard Development & Business Intelligence
+            </p>
+
+        </div>
+
+
+        <div class="tool-card">
+
+            <h3>
+                Power Query
+            </h3>
+
+            <p>
+                Data Cleaning & Transformation
+            </p>
+
+        </div>
+
+
+        <div class="tool-card">
+
+            <h3>
+                DAX
+            </h3>
+
+            <p>
+                Measures, Calculations & KPIs
+            </p>
+
+        </div>
+
+
+        <div class="tool-card">
+
+            <h3>
+                Data Modeling
+            </h3>
+
+            <p>
+                Relationships & Business Data Models
+            </p>
+
+        </div>
+
+
+        <div class="tool-card">
+
+            <h3>
+                Data Visualization
+            </h3>
+
+            <p>
+                Interactive Charts & Dashboard Design
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- BACK -->
+
+<div class="back-container">
+
+    <a
+        href="index.html"
+        class="back-button">
+
+        ← Back to Portfolio
+
+    </a>
+
+</div>
+
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    © 2026 Praveen R | Power BI Developer
+
+</footer>
 
 
 </body>
